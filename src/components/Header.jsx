@@ -1,17 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Head } from '../Styles/Header'
 
-const Header = () => {
-  const [ darkMode, setDarkMode ] = useState(false)
-
-  const handleClick = () => {
-    setDarkMode(!darkMode)
-  }
+const Header = (props) => {
+  let bt = props.darkMode ? "btn-light" : "btn-dark"
   return(
-    <div className="Header">
+    <Head>
       <h1>React Hooks</h1>
-      <button type="button" onClick={handleClick}>{darkMode ? 'Dark Mode' : 'Light Mode'}</button>
-      <button type="button" onClick={() => setDarkMode(!darkMode)}>{darkMode ? 'Dark Mode' : 'Light Mode'}</button>
-    </div>
+      <button type="button" onClick={props.onHandleClick} className={bt}>
+        {
+          props.darkMode 
+          ? 'Light Mode' 
+          : 'Dark Mode'
+        }
+        </button>
+    </Head>
   )
 }
 
