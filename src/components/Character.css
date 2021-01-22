@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  flex-basis: 50%;
+}
