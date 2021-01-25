@@ -16,7 +16,7 @@ export default function Characters() {
     <div className="container">
         <ul className="row">
           {characters.map((character) => (
-            <li className="col-6 col-md-3">
+            <li key={character.id} className="col-6 col-md-3">
               <Img src={character.image} alt=""/>
               <H2>{character.name}</H2>
             </li>

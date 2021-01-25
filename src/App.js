@@ -2,20 +2,18 @@ import { useState } from 'react'
 import './App.css';
 import Header from './components/Header'
 import Characters from './components/Characters'
+import ThemeContext from './context/ThemeContext'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
-
-  const handleClick = () => {
-    setDarkMode(!darkMode)
-  }
-  let bg = darkMode ? "bg-dark text-light" : "bg-light text-dark"
-  let bt = darkMode ? "btn-light" : "btn-dark"
+  let bt = darkMode ? "btn-dark" : "btn-light"
   return (
-    <div className={"App "+ bg}>
-      <Header onHandleClick={handleClick} darkMode={darkMode} className={bt} />
-      <Characters />
-    </div>
+    <ThemeContext.Provider value={{darkMode, setDarkMode}}>
+      <div className={darkMode ? "Light" : "Dark"} >
+        <Header className={bt}/>
+        <Characters />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

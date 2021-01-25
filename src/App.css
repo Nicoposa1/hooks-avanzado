@@ -3,6 +3,17 @@
   margin-bottom: 30px;
 }
 
+.Light {
+  color: #1e56a0;
+  background: #f5feff;
+  text-align: center;
+}
+.Dark {
+  color: #f5feff;
+  background: #232931;
+  text-align: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
