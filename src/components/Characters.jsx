@@ -53,7 +53,7 @@ export default function Characters() {
     <div className="container">
       {
         favorites.favorites.map(favorite => (
-          <li key={favorite.id}>
+          <li className="favoriteList" key={favorite.id}>
             {favorite.name}
           </li>
         ))
